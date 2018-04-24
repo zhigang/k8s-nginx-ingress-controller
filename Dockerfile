@@ -1,4 +1,4 @@
 #For don't connect to gcr.io in china.
-FROM gcr.io/google_containers/nginx-ingress-controller:0.8.3
+FROM quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.9.0
 
 LABEL MAINTAINER="siriuszg <zhigang52110@sina.com>"
