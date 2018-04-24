@@ -15,4 +15,5 @@ docker pull siriuszg/nginx-ingress-controller
   * form gcr.io/google_containers/nginx-ingress-controller:0.8.3
 * 0.9.0
 * 0.10.0
-* 0.10.2, latest
+* 0.10.2
+* 0.11.0, latest
