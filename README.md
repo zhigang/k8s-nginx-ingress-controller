@@ -23,4 +23,5 @@ docker pull siriuszg/nginx-ingress-controller
 * 0.15.0
 * 0.16.0
 * 0.16.2
-* 0.17.0, latest
+* 0.17.0
+* 0.17.1, latest
