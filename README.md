@@ -11,10 +11,10 @@ docker pull siriuszg/nginx-ingress-controller:<TAG>
 
 ## Docker Tag
 
-* form us.gcr.io/k8s-artifacts-prod/ingress-nginx/controller
+* base image from us.gcr.io/k8s-artifacts-prod/ingress-nginx/controller
   * v0.34.1, latest
   * v0.34.0
-* form quay.io/kubernetes-ingress-controller/nginx-ingress-controller
+* base image from quay.io/kubernetes-ingress-controller/nginx-ingress-controller
   * 0.33.0
   * 0.32.0
   * 0.31.1
@@ -49,5 +49,5 @@ docker pull siriuszg/nginx-ingress-controller:<TAG>
   * 0.10.2
   * 0.10.0
   * 0.9.0
-* form gcr.io/google_containers/nginx-ingress-controller:0.8.3
+* base image from gcr.io/google_containers/nginx-ingress-controller
   * 0.8.3
