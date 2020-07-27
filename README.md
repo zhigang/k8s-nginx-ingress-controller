@@ -13,6 +13,7 @@ docker pull siriuszg/nginx-ingress-controller
 
 * 0.34.1, latest
 * 0.34.0
+  * form us.gcr.io/k8s-artifacts-prod/ingress-nginx/controller
 * 0.33.0
 * 0.32.0
 * 0.31.1
