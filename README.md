@@ -6,13 +6,14 @@ Learn more at: [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-
 ## Docker Pull Command
 
 ```bash
-docker pull siriuszg/nginx-ingress-controller
+docker pull siriuszg/nginx-ingress-controller:<TAG>
 ```
 
 ## Docker Tag
 
 * form us.gcr.io/k8s-artifacts-prod/ingress-nginx/controller
-  * v0.34.0, latest
+  * v0.34.1, latest
+  * v0.34.0
 * form quay.io/kubernetes-ingress-controller/nginx-ingress-controller
   * 0.33.0
   * 0.32.0
