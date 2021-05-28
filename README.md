@@ -13,6 +13,7 @@ docker pull siriuszg/nginx-ingress-controller:<TAG>
 
 * base image from k8s.gcr.io/ingress-nginx/controller
   * v0.46.0, latest
+  * v0.45.0
   * v0.44.0
   * v0.43.0
   * v0.42.0
