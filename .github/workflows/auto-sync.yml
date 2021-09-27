@@ -71,4 +71,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: siriuszg/nginx-ingress-controller:${{ env.LATEST }}
+          tags: siriuszg/nginx-ingress-controller:${{ env.LATEST }},siriuszg/nginx-ingress-controller:latest
