@@ -1,4 +1,4 @@
-name: auto sync release
+name: auto sync version
 
 on:
   workflow_dispatch:
