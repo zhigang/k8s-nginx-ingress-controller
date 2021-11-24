@@ -13,7 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT }}
       - name: Get Release Version
         id: get-version
         run: |
@@ -32,15 +34,12 @@ jobs:
       - name: Update Version
         if: success() && steps.get-version.outputs.latest != 0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CURRENT: ${{ steps.get-version.outputs.current }}
           LATEST: ${{ steps.get-version.outputs.latest }}
         run: |
           echo "Update Version From $CURRENT To $LATEST"
           sed -i "s/$CURRENT/$LATEST/g" Dockerfile
           sed -i "s/$CURRENT/$LATEST/g;/$LATEST/a\  * $CURRENT" README.md
-          git config user.email zhigang52110@sina.com
-          git config user.name zhigang
           git commit -a -m "update version to $LATEST"
           git tag -a $LATEST -m "$LATEST"
           git push --follow-tags
