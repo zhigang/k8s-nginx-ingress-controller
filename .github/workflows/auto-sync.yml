@@ -40,6 +40,8 @@ jobs:
           echo "Update Version From $CURRENT To $LATEST"
           sed -i "s/$CURRENT/$LATEST/g" Dockerfile
           sed -i "s/$CURRENT/$LATEST/g;/$LATEST/a\  * $CURRENT" README.md
+          git config user.email zhigang52110@sina.com
+          git config user.name zhigang
           git commit -a -m "update version to $LATEST"
           git tag -a $LATEST -m "$LATEST"
           git push --follow-tags
