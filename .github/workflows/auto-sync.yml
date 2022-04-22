@@ -21,7 +21,7 @@ jobs:
         run: |
           git fetch --tags
           export CURRENT=$(cat Dockerfile | sed -n "/controller/s/.*\/controller.\(v.*\)/\1/p")
-          export LATEST=$(curl -sI https://github.com/kubernetes/ingress-nginx/releases/latest | sed -n '/tag/s/.*tag\/controller.\(v.*\)./\1/p')
+          export LATEST=$(curl -s https://api.github.com/repos/kubernetes/ingress-nginx/releases | jq -r '[ .[] | select(.tag_name | startswith("controller-")) | .tag_name | ltrimstr("controller-") ][0]')
           echo "current version: $CURRENT; latest release version: $LATEST"
           if [ "$LATEST" != "" ] && [ "$LATEST" != "$CURRENT" ]; then
             echo "found new release version"
