@@ -23,7 +23,7 @@ jobs:
           export CURRENT=$(cat Dockerfile | sed -n "/controller/s/.*\/controller.\(v.*\)/\1/p")
           export LATEST=$(curl -s https://api.github.com/repos/kubernetes/ingress-nginx/releases | jq -r '[ .[] | select(.tag_name | startswith("controller-")) | .tag_name | ltrimstr("controller-") ][0]')
           echo "current version: $CURRENT; latest release version: $LATEST"
-          if [ "$LATEST" != "" ] && [ "$LATEST" != "$CURRENT" ]; then
+          if [ "$LATEST" != "" ] && [ "$LATEST" != "null" ] && [ "$LATEST" != "$CURRENT" ]; then
             echo "found new release version"
             echo "current=$CURRENT" >> "$GITHUB_OUTPUT"
             echo "latest=$LATEST" >> "$GITHUB_OUTPUT"
